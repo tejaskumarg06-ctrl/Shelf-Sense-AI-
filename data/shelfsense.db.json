@@ -1,0 +1,2060 @@
+{
+  "version": 1,
+  "lastUpdated": "2026-10-30T02:37:18.493Z",
+  "store": {
+    "id": "store_001",
+    "name": "Krishna Provision & Perishables Store",
+    "address": "14th Main Rd, Indiranagar, Bengaluru, Karnataka 560038",
+    "locale": "en-IN",
+    "currency": "INR",
+    "currencySymbol": "₹",
+    "timezone": "Asia/Kolkata",
+    "openingDays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "operatingHours": "07:00 - 22:00"
+  },
+  "policy": {
+    "warningWindowDays": 5,
+    "urgentWindowDays": 2,
+    "operationalCutoffOffsetDays": 1,
+    "minimumGrossMarginPct": 15,
+    "defaultSafetyStockDays": 2,
+    "reviewPeriodDays": 3,
+    "fefoEnabled": true,
+    "autoFlagUnknownDates": true
+  },
+  "suppliers": [
+    {
+      "id": "supp_amul",
+      "name": "Karnataka Milk Federation / Amul Direct Depo",
+      "contactPerson": "Ramesh Gowda",
+      "phone": "+91 98450 12345",
+      "email": "orders@kmf-bangalore.in",
+      "leadTimeDays": 1,
+      "minimumOrderQuantity": 20,
+      "allowsReturns": false,
+      "returnWindowDaysBeforeCutoff": 0,
+      "notes": "Daily early morning delivery at 05:30 AM. Strictly no returns on fresh pasteurized milk."
+    },
+    {
+      "id": "supp_mother_dairy",
+      "name": "Mother Dairy Fresh Logistics",
+      "contactPerson": "Suresh Kumar",
+      "phone": "+91 98860 67890",
+      "email": "supply@motherdairy-south.com",
+      "leadTimeDays": 1,
+      "minimumOrderQuantity": 15,
+      "allowsReturns": true,
+      "returnWindowDaysBeforeCutoff": 2,
+      "notes": "Allows credit note exchange on curd/dahi if flagged 48 hours before cutoff."
+    },
+    {
+      "id": "supp_britannia",
+      "name": "Britannia Foods City Distributor",
+      "contactPerson": "Anand Verma",
+      "phone": "+91 97410 54321",
+      "email": "orders@britannia-distrib.com",
+      "leadTimeDays": 1,
+      "minimumOrderQuantity": 24,
+      "allowsReturns": true,
+      "returnWindowDaysBeforeCutoff": 1,
+      "notes": "Allows full credit swap on unsold packaged whole wheat bread 24 hours prior to cutoff."
+    },
+    {
+      "id": "supp_heritage",
+      "name": "Heritage Foods Regional Dairy",
+      "contactPerson": "Venkatesh Rao",
+      "phone": "+91 99000 88776",
+      "email": "sales@heritagefoods.in",
+      "leadTimeDays": 2,
+      "minimumOrderQuantity": 10,
+      "allowsReturns": false,
+      "returnWindowDaysBeforeCutoff": 0,
+      "notes": "Cold chain delivery every 2 days. Paneer and curd packs."
+    },
+    {
+      "id": "supp_epigamia",
+      "name": "Drums Food International (Epigamia)",
+      "contactPerson": "Pooja Hegde",
+      "phone": "+91 98200 11223",
+      "email": "retail@epigamia.com",
+      "leadTimeDays": 2,
+      "minimumOrderQuantity": 12,
+      "allowsReturns": false,
+      "returnWindowDaysBeforeCutoff": 0,
+      "notes": "Gourmet yogurts and dairy snacks. High margin perishable lines."
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_milk_amul",
+      "sku": "DAI-MILK-001",
+      "name": "Amul Taaza Homogenised Toned Milk (1L)",
+      "category": "Dairy & Milk",
+      "unit": "carton",
+      "barcode": "8901262010053",
+      "supplierId": "supp_amul",
+      "defaultPurchaseCost": 56,
+      "defaultSellingPrice": 68,
+      "minimumStockLevel": 25,
+      "status": "active",
+      "shelfLifeDays": 4,
+      "createdAt": "2026-09-17",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "prod_dahi_mother",
+      "sku": "DAI-CURD-002",
+      "name": "Mother Dairy Classic Dahi / Curd (400g)",
+      "category": "Dairy & Milk",
+      "unit": "tub",
+      "barcode": "8901648001234",
+      "supplierId": "supp_mother_dairy",
+      "defaultPurchaseCost": 38,
+      "defaultSellingPrice": 50,
+      "minimumStockLevel": 12,
+      "status": "active",
+      "shelfLifeDays": 6,
+      "createdAt": "2026-09-17",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "prod_bread_britannia",
+      "sku": "BAK-BREAD-003",
+      "name": "Britannia 100% Whole Wheat Bread (400g)",
+      "category": "Bakery",
+      "unit": "packet",
+      "barcode": "8901063131012",
+      "supplierId": "supp_britannia",
+      "defaultPurchaseCost": 40,
+      "defaultSellingPrice": 55,
+      "minimumStockLevel": 15,
+      "status": "active",
+      "shelfLifeDays": 5,
+      "createdAt": "2026-09-17",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "prod_paneer_heritage",
+      "sku": "DAI-PANEER-004",
+      "name": "Heritage Fresh Malai Paneer (200g)",
+      "category": "Dairy & Milk",
+      "unit": "packet",
+      "barcode": "8906008510452",
+      "supplierId": "supp_heritage",
+      "defaultPurchaseCost": 88,
+      "defaultSellingPrice": 115,
+      "minimumStockLevel": 8,
+      "status": "active",
+      "shelfLifeDays": 7,
+      "createdAt": "2026-09-17",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "prod_paneer_local",
+      "sku": "DAI-PANEER-005",
+      "name": "Local Organic Farmhouse Paneer (200g)",
+      "category": "Dairy & Milk",
+      "unit": "packet",
+      "barcode": "8900000000001",
+      "defaultPurchaseCost": 75,
+      "defaultSellingPrice": 100,
+      "minimumStockLevel": 5,
+      "status": "active",
+      "shelfLifeDays": 5,
+      "createdAt": "2026-10-12",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "prod_mango_alphonso",
+      "sku": "FRU-MANGO-006",
+      "name": "Ratnagiri Alphonso Mangoes Grade-A (1kg Box)",
+      "category": "Fresh Produce",
+      "unit": "box",
+      "barcode": "8909988776655",
+      "defaultPurchaseCost": 450,
+      "defaultSellingPrice": 650,
+      "minimumStockLevel": 4,
+      "status": "active",
+      "manualDemandEstimatePerDay": 2,
+      "shelfLifeDays": 6,
+      "createdAt": "2026-10-15",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "prod_yogurt_epigamia",
+      "sku": "DAI-YOGURT-007",
+      "name": "Epigamia Greek Yogurt Strawberry (120g)",
+      "category": "Dairy & Milk",
+      "unit": "cup",
+      "barcode": "8906073120198",
+      "supplierId": "supp_epigamia",
+      "defaultPurchaseCost": 45,
+      "defaultSellingPrice": 65,
+      "minimumStockLevel": 10,
+      "status": "active",
+      "shelfLifeDays": 14,
+      "createdAt": "2026-09-17",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "prod_eggs_country",
+      "sku": "EGG-COUNTRY-008",
+      "name": "Country Free-Range Brown Eggs (Pack of 6)",
+      "category": "Poultry & Eggs",
+      "unit": "pack",
+      "barcode": "8907766554433",
+      "defaultPurchaseCost": 62,
+      "defaultSellingPrice": 70,
+      "minimumStockLevel": 8,
+      "status": "active",
+      "shelfLifeDays": 10,
+      "createdAt": "2026-09-17",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "prod_ghee_nandini",
+      "sku": "GRO-GHEE-009",
+      "name": "Nandini Pure Cow Ghee (500ml Pet Jar)",
+      "category": "Pantry Staples",
+      "unit": "jar",
+      "barcode": "8901262020083",
+      "defaultPurchaseCost": 310,
+      "defaultSellingPrice": 350,
+      "minimumStockLevel": 12,
+      "status": "active",
+      "shelfLifeDays": 270,
+      "createdAt": "2026-09-17",
+      "updatedAt": "2026-10-17"
+    }
+  ],
+  "batches": [
+    {
+      "id": "batch_m101",
+      "productId": "prod_milk_amul",
+      "batchId": "B-AMUL-M101",
+      "quantityReceived": 40,
+      "quantityRemaining": 20,
+      "receivedDate": "2026-10-14",
+      "isReceivedDateEstimated": false,
+      "labelDate": "2026-10-20",
+      "labelType": "use_by",
+      "operationalCutoffDate": "2026-10-19",
+      "purchaseCostPerUnit": 56,
+      "sellingPricePerUnit": 68,
+      "storageLocation": "Dairy Chiller - Shelf 1 (Front)",
+      "supplierId": "supp_amul",
+      "status": "active",
+      "notes": "First delivery of week. Needs priority sale before fresher M102 batch.",
+      "createdAt": "2026-10-14",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "batch_m102",
+      "productId": "prod_milk_amul",
+      "batchId": "B-AMUL-M102",
+      "quantityReceived": 35,
+      "quantityRemaining": 32,
+      "receivedDate": "2026-10-17",
+      "isReceivedDateEstimated": false,
+      "labelDate": "2026-10-26",
+      "labelType": "use_by",
+      "operationalCutoffDate": "2026-10-25",
+      "purchaseCostPerUnit": 56,
+      "sellingPricePerUnit": 68,
+      "storageLocation": "Dairy Chiller - Shelf 2 (Back)",
+      "supplierId": "supp_amul",
+      "status": "active",
+      "notes": "Received this morning. Keep behind M101 in accordance with FEFO.",
+      "createdAt": "2026-10-17",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "batch_d204",
+      "productId": "prod_dahi_mother",
+      "batchId": "B-MD-D204",
+      "quantityReceived": 25,
+      "quantityRemaining": 15,
+      "receivedDate": "2026-10-13",
+      "isReceivedDateEstimated": false,
+      "labelDate": "2026-10-19",
+      "labelType": "use_by",
+      "operationalCutoffDate": "2026-10-18",
+      "purchaseCostPerUnit": 38,
+      "sellingPricePerUnit": 50,
+      "storageLocation": "Refrigerated Display Case A",
+      "supplierId": "supp_mother_dairy",
+      "status": "active",
+      "notes": "Cutoff tomorrow. Review exchange agreement or markdown.",
+      "createdAt": "2026-10-13",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "batch_b301",
+      "productId": "prod_bread_britannia",
+      "batchId": "B-BRIT-B301",
+      "quantityReceived": 30,
+      "quantityRemaining": 16,
+      "receivedDate": "2026-10-15",
+      "isReceivedDateEstimated": false,
+      "labelDate": "2026-10-20",
+      "labelType": "best_before",
+      "operationalCutoffDate": "2026-10-19",
+      "purchaseCostPerUnit": 40,
+      "sellingPricePerUnit": 55,
+      "storageLocation": "Bakery Rack Eye-Level",
+      "supplierId": "supp_britannia",
+      "status": "active",
+      "notes": "Supplier allows exchange if notified 24h prior.",
+      "createdAt": "2026-10-15",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "batch_p401",
+      "productId": "prod_paneer_heritage",
+      "batchId": "B-HER-P401",
+      "quantityReceived": 18,
+      "quantityRemaining": 13,
+      "receivedDate": "2026-10-14",
+      "isReceivedDateEstimated": false,
+      "labelDate": "2026-10-21",
+      "labelType": "use_by",
+      "operationalCutoffDate": "2026-10-20",
+      "purchaseCostPerUnit": 88,
+      "sellingPricePerUnit": 115,
+      "storageLocation": "Dairy Chiller - Shelf 3",
+      "supplierId": "supp_heritage",
+      "status": "active",
+      "notes": "High unit cost item. Daily demand is ~2 packs. Risk of 7-8 packs remaining.",
+      "createdAt": "2026-10-14",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "batch_unk001",
+      "productId": "prod_paneer_local",
+      "batchId": "B-LOC-UNK01",
+      "quantityReceived": 8,
+      "quantityRemaining": 8,
+      "receivedDate": "2026-10-16",
+      "isReceivedDateEstimated": false,
+      "labelType": "unknown",
+      "purchaseCostPerUnit": 75,
+      "sellingPricePerUnit": 100,
+      "storageLocation": "Organic Counter Chiller",
+      "status": "flagged_for_review",
+      "notes": "Printed label smudged during transit. Safety status unverified. Flagged for shopkeeper inspection.",
+      "createdAt": "2026-10-16",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "batch_mgo501",
+      "productId": "prod_mango_alphonso",
+      "batchId": "B-MGO-501",
+      "quantityReceived": 12,
+      "quantityRemaining": 9,
+      "receivedDate": "2026-10-16",
+      "isReceivedDateEstimated": false,
+      "labelDate": "2026-10-22",
+      "labelType": "best_before",
+      "operationalCutoffDate": "2026-10-21",
+      "purchaseCostPerUnit": 450,
+      "sellingPricePerUnit": 650,
+      "storageLocation": "Front Produce Fruit Table",
+      "status": "active",
+      "notes": "Freshly arrived from Ratnagiri. Owner manual estimate: 2 boxes/day.",
+      "createdAt": "2026-10-16",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "batch_gy601",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "B-EPI-GY601",
+      "quantityReceived": 24,
+      "quantityRemaining": 16,
+      "receivedDate": "2026-10-10",
+      "isReceivedDateEstimated": false,
+      "labelDate": "2026-10-21",
+      "labelType": "best_before",
+      "operationalCutoffDate": "2026-10-20",
+      "purchaseCostPerUnit": 45,
+      "sellingPricePerUnit": 65,
+      "storageLocation": "Specialty Dairy Rack 1",
+      "supplierId": "supp_epigamia",
+      "status": "active",
+      "notes": "Good candidate for 15% markdown (₹55) to accelerate sell-through before cutoff.",
+      "createdAt": "2026-10-10",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "batch_eg701",
+      "productId": "prod_eggs_country",
+      "batchId": "B-EGG-701",
+      "quantityReceived": 20,
+      "quantityRemaining": 14,
+      "receivedDate": "2026-10-12",
+      "isReceivedDateEstimated": false,
+      "labelDate": "2026-10-21",
+      "labelType": "best_before",
+      "operationalCutoffDate": "2026-10-20",
+      "purchaseCostPerUnit": 62,
+      "sellingPricePerUnit": 70,
+      "storageLocation": "Poultry Shelf Top",
+      "status": "active",
+      "notes": "Narrow margin item (cost ₹62, retail ₹70). Cannot be discounted below ₹72.94 to maintain 15% margin.",
+      "createdAt": "2026-10-12",
+      "updatedAt": "2026-10-17"
+    },
+    {
+      "id": "batch_ghee801",
+      "productId": "prod_ghee_nandini",
+      "batchId": "B-GHEE-801",
+      "quantityReceived": 24,
+      "quantityRemaining": 21,
+      "receivedDate": "2026-10-02",
+      "isReceivedDateEstimated": false,
+      "labelDate": "2027-06-29",
+      "labelType": "best_before",
+      "operationalCutoffDate": "2027-06-24",
+      "purchaseCostPerUnit": 310,
+      "sellingPricePerUnit": 350,
+      "storageLocation": "Ghee & Oils Aisle 2",
+      "status": "active",
+      "notes": "Standard stable shelf stock.",
+      "createdAt": "2026-10-02",
+      "updatedAt": "2026-10-17"
+    }
+  ],
+  "sales": [
+    {
+      "id": "sale_1",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 5,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-03",
+      "transactionId": "TXN-POS-20261003-2",
+      "createdAt": "2026-10-03"
+    },
+    {
+      "id": "sale_2",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 4,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-03",
+      "transactionId": "TXN-POS-20261003-3",
+      "createdAt": "2026-10-03"
+    },
+    {
+      "id": "sale_3",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 10,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-03",
+      "transactionId": "TXN-POS-20261003-4",
+      "createdAt": "2026-10-03"
+    },
+    {
+      "id": "sale_4",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 1,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-03",
+      "transactionId": "TXN-POS-20261003-5",
+      "createdAt": "2026-10-03"
+    },
+    {
+      "id": "sale_5",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 4,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-03",
+      "transactionId": "TXN-POS-20261003-6",
+      "createdAt": "2026-10-03"
+    },
+    {
+      "id": "sale_6",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 4,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-03",
+      "transactionId": "TXN-POS-20261003-7",
+      "createdAt": "2026-10-03"
+    },
+    {
+      "id": "sale_7",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-03",
+      "transactionId": "TXN-POS-20261003-8",
+      "createdAt": "2026-10-03"
+    },
+    {
+      "id": "sale_8",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 8,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-04",
+      "transactionId": "TXN-POS-20261004-9",
+      "createdAt": "2026-10-04"
+    },
+    {
+      "id": "sale_9",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 7,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-04",
+      "transactionId": "TXN-POS-20261004-10",
+      "createdAt": "2026-10-04"
+    },
+    {
+      "id": "sale_10",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 13,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-04",
+      "transactionId": "TXN-POS-20261004-11",
+      "createdAt": "2026-10-04"
+    },
+    {
+      "id": "sale_11",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 4,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-04",
+      "transactionId": "TXN-POS-20261004-12",
+      "createdAt": "2026-10-04"
+    },
+    {
+      "id": "sale_12",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 3,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-04",
+      "transactionId": "TXN-POS-20261004-13",
+      "createdAt": "2026-10-04"
+    },
+    {
+      "id": "sale_13",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 3,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-04",
+      "transactionId": "TXN-POS-20261004-14",
+      "createdAt": "2026-10-04"
+    },
+    {
+      "id": "sale_14",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-04",
+      "transactionId": "TXN-POS-20261004-15",
+      "createdAt": "2026-10-04"
+    },
+    {
+      "id": "sale_15",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 5,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-05",
+      "transactionId": "TXN-POS-20261005-16",
+      "createdAt": "2026-10-05"
+    },
+    {
+      "id": "sale_16",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 4,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-05",
+      "transactionId": "TXN-POS-20261005-17",
+      "createdAt": "2026-10-05"
+    },
+    {
+      "id": "sale_17",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 12,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-05",
+      "transactionId": "TXN-POS-20261005-18",
+      "createdAt": "2026-10-05"
+    },
+    {
+      "id": "sale_18",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 2,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-05",
+      "transactionId": "TXN-POS-20261005-19",
+      "createdAt": "2026-10-05"
+    },
+    {
+      "id": "sale_19",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 3,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-05",
+      "transactionId": "TXN-POS-20261005-20",
+      "createdAt": "2026-10-05"
+    },
+    {
+      "id": "sale_20",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 4,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-05",
+      "transactionId": "TXN-POS-20261005-21",
+      "createdAt": "2026-10-05"
+    },
+    {
+      "id": "sale_21",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-05",
+      "transactionId": "TXN-POS-20261005-22",
+      "createdAt": "2026-10-05"
+    },
+    {
+      "id": "sale_22",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 4,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-06",
+      "transactionId": "TXN-POS-20261006-23",
+      "createdAt": "2026-10-06"
+    },
+    {
+      "id": "sale_23",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 3,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-06",
+      "transactionId": "TXN-POS-20261006-24",
+      "createdAt": "2026-10-06"
+    },
+    {
+      "id": "sale_24",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 9,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-06",
+      "transactionId": "TXN-POS-20261006-25",
+      "createdAt": "2026-10-06"
+    },
+    {
+      "id": "sale_25",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 1,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-06",
+      "transactionId": "TXN-POS-20261006-26",
+      "createdAt": "2026-10-06"
+    },
+    {
+      "id": "sale_26",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 2,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-06",
+      "transactionId": "TXN-POS-20261006-27",
+      "createdAt": "2026-10-06"
+    },
+    {
+      "id": "sale_27",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 3,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-06",
+      "transactionId": "TXN-POS-20261006-28",
+      "createdAt": "2026-10-06"
+    },
+    {
+      "id": "sale_28",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-06",
+      "transactionId": "TXN-POS-20261006-29",
+      "createdAt": "2026-10-06"
+    },
+    {
+      "id": "sale_29",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 6,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-07",
+      "transactionId": "TXN-POS-20261007-30",
+      "createdAt": "2026-10-07"
+    },
+    {
+      "id": "sale_30",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 5,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-07",
+      "transactionId": "TXN-POS-20261007-31",
+      "createdAt": "2026-10-07"
+    },
+    {
+      "id": "sale_31",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 11,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-07",
+      "transactionId": "TXN-POS-20261007-32",
+      "createdAt": "2026-10-07"
+    },
+    {
+      "id": "sale_32",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 3,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-07",
+      "transactionId": "TXN-POS-20261007-33",
+      "createdAt": "2026-10-07"
+    },
+    {
+      "id": "sale_33",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 3,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-07",
+      "transactionId": "TXN-POS-20261007-34",
+      "createdAt": "2026-10-07"
+    },
+    {
+      "id": "sale_34",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 2,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-07",
+      "transactionId": "TXN-POS-20261007-35",
+      "createdAt": "2026-10-07"
+    },
+    {
+      "id": "sale_35",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-07",
+      "transactionId": "TXN-POS-20261007-36",
+      "createdAt": "2026-10-07"
+    },
+    {
+      "id": "sale_36",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 5,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-08",
+      "transactionId": "TXN-POS-20261008-37",
+      "createdAt": "2026-10-08"
+    },
+    {
+      "id": "sale_37",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 4,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-08",
+      "transactionId": "TXN-POS-20261008-38",
+      "createdAt": "2026-10-08"
+    },
+    {
+      "id": "sale_38",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 8,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-08",
+      "transactionId": "TXN-POS-20261008-39",
+      "createdAt": "2026-10-08"
+    },
+    {
+      "id": "sale_39",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 2,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-08",
+      "transactionId": "TXN-POS-20261008-40",
+      "createdAt": "2026-10-08"
+    },
+    {
+      "id": "sale_40",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 2,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-08",
+      "transactionId": "TXN-POS-20261008-41",
+      "createdAt": "2026-10-08"
+    },
+    {
+      "id": "sale_41",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 4,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-08",
+      "transactionId": "TXN-POS-20261008-42",
+      "createdAt": "2026-10-08"
+    },
+    {
+      "id": "sale_42",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-08",
+      "transactionId": "TXN-POS-20261008-43",
+      "createdAt": "2026-10-08"
+    },
+    {
+      "id": "sale_43",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 4,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-09",
+      "transactionId": "TXN-POS-20261009-44",
+      "createdAt": "2026-10-09"
+    },
+    {
+      "id": "sale_44",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 3,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-09",
+      "transactionId": "TXN-POS-20261009-45",
+      "createdAt": "2026-10-09"
+    },
+    {
+      "id": "sale_45",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 10,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-09",
+      "transactionId": "TXN-POS-20261009-46",
+      "createdAt": "2026-10-09"
+    },
+    {
+      "id": "sale_46",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 1,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-09",
+      "transactionId": "TXN-POS-20261009-47",
+      "createdAt": "2026-10-09"
+    },
+    {
+      "id": "sale_47",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 3,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-09",
+      "transactionId": "TXN-POS-20261009-48",
+      "createdAt": "2026-10-09"
+    },
+    {
+      "id": "sale_48",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 3,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-09",
+      "transactionId": "TXN-POS-20261009-49",
+      "createdAt": "2026-10-09"
+    },
+    {
+      "id": "sale_49",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-09",
+      "transactionId": "TXN-POS-20261009-50",
+      "createdAt": "2026-10-09"
+    },
+    {
+      "id": "sale_50",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 8,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-10",
+      "transactionId": "TXN-POS-20261010-51",
+      "createdAt": "2026-10-10"
+    },
+    {
+      "id": "sale_51",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 7,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-10",
+      "transactionId": "TXN-POS-20261010-52",
+      "createdAt": "2026-10-10"
+    },
+    {
+      "id": "sale_52",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 16,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-10",
+      "transactionId": "TXN-POS-20261010-53",
+      "createdAt": "2026-10-10"
+    },
+    {
+      "id": "sale_53",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 4,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-10",
+      "transactionId": "TXN-POS-20261010-54",
+      "createdAt": "2026-10-10"
+    },
+    {
+      "id": "sale_54",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 3,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-10",
+      "transactionId": "TXN-POS-20261010-55",
+      "createdAt": "2026-10-10"
+    },
+    {
+      "id": "sale_55",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 3,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-10",
+      "transactionId": "TXN-POS-20261010-56",
+      "createdAt": "2026-10-10"
+    },
+    {
+      "id": "sale_56",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-10",
+      "transactionId": "TXN-POS-20261010-57",
+      "createdAt": "2026-10-10"
+    },
+    {
+      "id": "sale_57",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 7,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-11",
+      "transactionId": "TXN-POS-20261011-58",
+      "createdAt": "2026-10-11"
+    },
+    {
+      "id": "sale_58",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 5,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-11",
+      "transactionId": "TXN-POS-20261011-59",
+      "createdAt": "2026-10-11"
+    },
+    {
+      "id": "sale_59",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 12,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-11",
+      "transactionId": "TXN-POS-20261011-60",
+      "createdAt": "2026-10-11"
+    },
+    {
+      "id": "sale_60",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 3,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-11",
+      "transactionId": "TXN-POS-20261011-61",
+      "createdAt": "2026-10-11"
+    },
+    {
+      "id": "sale_61",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 4,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-11",
+      "transactionId": "TXN-POS-20261011-62",
+      "createdAt": "2026-10-11"
+    },
+    {
+      "id": "sale_62",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 5,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-11",
+      "transactionId": "TXN-POS-20261011-63",
+      "createdAt": "2026-10-11"
+    },
+    {
+      "id": "sale_63",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-11",
+      "transactionId": "TXN-POS-20261011-64",
+      "createdAt": "2026-10-11"
+    },
+    {
+      "id": "sale_64",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 4,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-12",
+      "transactionId": "TXN-POS-20261012-65",
+      "createdAt": "2026-10-12"
+    },
+    {
+      "id": "sale_65",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 3,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-12",
+      "transactionId": "TXN-POS-20261012-66",
+      "createdAt": "2026-10-12"
+    },
+    {
+      "id": "sale_66",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 11,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-12",
+      "transactionId": "TXN-POS-20261012-67",
+      "createdAt": "2026-10-12"
+    },
+    {
+      "id": "sale_67",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 1,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-12",
+      "transactionId": "TXN-POS-20261012-68",
+      "createdAt": "2026-10-12"
+    },
+    {
+      "id": "sale_68",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 2,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-12",
+      "transactionId": "TXN-POS-20261012-69",
+      "createdAt": "2026-10-12"
+    },
+    {
+      "id": "sale_69",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 3,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-12",
+      "transactionId": "TXN-POS-20261012-70",
+      "createdAt": "2026-10-12"
+    },
+    {
+      "id": "sale_70",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-12",
+      "transactionId": "TXN-POS-20261012-71",
+      "createdAt": "2026-10-12"
+    },
+    {
+      "id": "sale_71",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 6,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-13",
+      "transactionId": "TXN-POS-20261013-72",
+      "createdAt": "2026-10-13"
+    },
+    {
+      "id": "sale_72",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 5,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-13",
+      "transactionId": "TXN-POS-20261013-73",
+      "createdAt": "2026-10-13"
+    },
+    {
+      "id": "sale_73",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 8,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-13",
+      "transactionId": "TXN-POS-20261013-74",
+      "createdAt": "2026-10-13"
+    },
+    {
+      "id": "sale_74",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 3,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-13",
+      "transactionId": "TXN-POS-20261013-75",
+      "createdAt": "2026-10-13"
+    },
+    {
+      "id": "sale_75",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 3,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-13",
+      "transactionId": "TXN-POS-20261013-76",
+      "createdAt": "2026-10-13"
+    },
+    {
+      "id": "sale_76",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 2,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-13",
+      "transactionId": "TXN-POS-20261013-77",
+      "createdAt": "2026-10-13"
+    },
+    {
+      "id": "sale_77",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-13",
+      "transactionId": "TXN-POS-20261013-78",
+      "createdAt": "2026-10-13"
+    },
+    {
+      "id": "sale_78",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 5,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-14",
+      "transactionId": "TXN-POS-20261014-79",
+      "createdAt": "2026-10-14"
+    },
+    {
+      "id": "sale_79",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 4,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-14",
+      "transactionId": "TXN-POS-20261014-80",
+      "createdAt": "2026-10-14"
+    },
+    {
+      "id": "sale_80",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 10,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-14",
+      "transactionId": "TXN-POS-20261014-81",
+      "createdAt": "2026-10-14"
+    },
+    {
+      "id": "sale_81",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 2,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-14",
+      "transactionId": "TXN-POS-20261014-82",
+      "createdAt": "2026-10-14"
+    },
+    {
+      "id": "sale_82",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 2,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-14",
+      "transactionId": "TXN-POS-20261014-83",
+      "createdAt": "2026-10-14"
+    },
+    {
+      "id": "sale_83",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 4,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-14",
+      "transactionId": "TXN-POS-20261014-84",
+      "createdAt": "2026-10-14"
+    },
+    {
+      "id": "sale_84",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-14",
+      "transactionId": "TXN-POS-20261014-85",
+      "createdAt": "2026-10-14"
+    },
+    {
+      "id": "sale_85",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 4,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-15",
+      "transactionId": "TXN-POS-20261015-86",
+      "createdAt": "2026-10-15"
+    },
+    {
+      "id": "sale_86",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 3,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-15",
+      "transactionId": "TXN-POS-20261015-87",
+      "createdAt": "2026-10-15"
+    },
+    {
+      "id": "sale_87",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 12,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-15",
+      "transactionId": "TXN-POS-20261015-88",
+      "createdAt": "2026-10-15"
+    },
+    {
+      "id": "sale_88",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 1,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-15",
+      "transactionId": "TXN-POS-20261015-89",
+      "createdAt": "2026-10-15"
+    },
+    {
+      "id": "sale_89",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 3,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-15",
+      "transactionId": "TXN-POS-20261015-90",
+      "createdAt": "2026-10-15"
+    },
+    {
+      "id": "sale_90",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 3,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-15",
+      "transactionId": "TXN-POS-20261015-91",
+      "createdAt": "2026-10-15"
+    },
+    {
+      "id": "sale_91",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-15",
+      "transactionId": "TXN-POS-20261015-92",
+      "createdAt": "2026-10-15"
+    },
+    {
+      "id": "sale_92",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m101",
+      "quantitySold": 6,
+      "unitSellingPrice": 68,
+      "saleDate": "2026-10-16",
+      "transactionId": "TXN-POS-20261016-93",
+      "createdAt": "2026-10-16"
+    },
+    {
+      "id": "sale_93",
+      "productId": "prod_dahi_mother",
+      "batchId": "batch_d204",
+      "quantitySold": 5,
+      "unitSellingPrice": 50,
+      "saleDate": "2026-10-16",
+      "transactionId": "TXN-POS-20261016-94",
+      "createdAt": "2026-10-16"
+    },
+    {
+      "id": "sale_94",
+      "productId": "prod_bread_britannia",
+      "batchId": "batch_b301",
+      "quantitySold": 9,
+      "unitSellingPrice": 55,
+      "saleDate": "2026-10-16",
+      "transactionId": "TXN-POS-20261016-95",
+      "createdAt": "2026-10-16"
+    },
+    {
+      "id": "sale_95",
+      "productId": "prod_paneer_heritage",
+      "batchId": "batch_p401",
+      "quantitySold": 3,
+      "unitSellingPrice": 115,
+      "saleDate": "2026-10-16",
+      "transactionId": "TXN-POS-20261016-96",
+      "createdAt": "2026-10-16"
+    },
+    {
+      "id": "sale_96",
+      "productId": "prod_yogurt_epigamia",
+      "batchId": "batch_gy601",
+      "quantitySold": 2,
+      "unitSellingPrice": 65,
+      "saleDate": "2026-10-16",
+      "transactionId": "TXN-POS-20261016-97",
+      "createdAt": "2026-10-16"
+    },
+    {
+      "id": "sale_97",
+      "productId": "prod_eggs_country",
+      "batchId": "batch_eg701",
+      "quantitySold": 2,
+      "unitSellingPrice": 70,
+      "saleDate": "2026-10-16",
+      "transactionId": "TXN-POS-20261016-98",
+      "createdAt": "2026-10-16"
+    },
+    {
+      "id": "sale_98",
+      "productId": "prod_ghee_nandini",
+      "batchId": "batch_ghee801",
+      "quantitySold": 1,
+      "unitSellingPrice": 350,
+      "saleDate": "2026-10-16",
+      "transactionId": "TXN-POS-20261016-99",
+      "createdAt": "2026-10-16"
+    }
+  ],
+  "wasteRecords": [
+    {
+      "id": "waste_001",
+      "productId": "prod_milk_amul",
+      "batchId": "B-AMUL-M098",
+      "quantityWasted": 4,
+      "unitCost": 56,
+      "totalCost": 224,
+      "reason": "expired_cutoff",
+      "recordedDate": "2026-10-10",
+      "notes": "Past cutoff sell-through limit. Removed from shelf and disposed.",
+      "createdAt": "2026-10-10"
+    },
+    {
+      "id": "waste_002",
+      "productId": "prod_bread_britannia",
+      "batchId": "B-BRIT-B288",
+      "quantityWasted": 2,
+      "unitCost": 40,
+      "totalCost": 80,
+      "reason": "damaged",
+      "recordedDate": "2026-10-06",
+      "notes": "Packet crushed during customer shelf handling.",
+      "createdAt": "2026-10-06"
+    },
+    {
+      "id": "waste_003",
+      "productId": "prod_paneer_heritage",
+      "batchId": "B-HER-P390",
+      "quantityWasted": 3,
+      "unitCost": 88,
+      "totalCost": 264,
+      "reason": "expired_cutoff",
+      "recordedDate": "2026-10-03",
+      "notes": "Slow weekday sales led to unsold packs past operational cutoff.",
+      "createdAt": "2026-10-03"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec_order_prod_dahi_mother",
+      "productId": "prod_dahi_mother",
+      "type": "purchasing",
+      "title": "Recommended Replenishment: Mother Dairy Classic Dahi / Curd (400g)",
+      "summary": "Order 15 tub(s) from Mother Dairy Fresh Logistics.",
+      "reason": "Replenishment recommendation: Order 15 tub(s). Covers projected 4-day horizon demand (17.6 units) + safety stock (8.8 units) minus available inventory (15 units). Adjusted up to meet supplier MOQ (15 units).",
+      "evidence": {
+        "quantityAvailable": 15,
+        "forecastDemand": 17.6,
+        "proposedOrderQty": 15,
+        "supplierLeadTime": 1,
+        "safetyStockUnits": 8.8,
+        "potentialCostExposure": 570
+      },
+      "expectedBenefit": "Maintains continuous availability over the next 4 days while preventing surplus over-ordering.",
+      "uncertaintyNotes": "Forecast based on 14 sales days (moving average). Lead time assumed at 1 day(s).",
+      "policyComplianceNote": "Requires manual shopkeeper confirmation before ordering; ShelfSense never auto-places purchase orders.",
+      "status": "pending",
+      "createdAt": "2026-10-30T02:37:18.342Z",
+      "updatedAt": "2026-10-30T02:37:18.342Z"
+    },
+    {
+      "id": "rec_order_prod_bread_britannia",
+      "productId": "prod_bread_britannia",
+      "type": "purchasing",
+      "title": "Recommended Replenishment: Britannia 100% Whole Wheat Bread (400g)",
+      "summary": "Order 72 packet(s) from Britannia Foods City Distributor.",
+      "reason": "Replenishment recommendation: Order 72 packet(s). Covers projected 4-day horizon demand (43.2 units) + safety stock (21.6 units) minus available inventory (16 units). Adjusted up to meet supplier MOQ (24 units).",
+      "evidence": {
+        "quantityAvailable": 16,
+        "forecastDemand": 43.2,
+        "proposedOrderQty": 72,
+        "supplierLeadTime": 1,
+        "safetyStockUnits": 21.6,
+        "potentialCostExposure": 2880
+      },
+      "expectedBenefit": "Maintains continuous availability over the next 4 days while preventing surplus over-ordering.",
+      "uncertaintyNotes": "Forecast based on 14 sales days (moving average). Lead time assumed at 1 day(s).",
+      "policyComplianceNote": "Requires manual shopkeeper confirmation before ordering; ShelfSense never auto-places purchase orders.",
+      "status": "pending",
+      "createdAt": "2026-10-30T02:37:18.342Z",
+      "updatedAt": "2026-10-30T02:37:18.342Z"
+    },
+    {
+      "id": "rec_order_prod_paneer_heritage",
+      "productId": "prod_paneer_heritage",
+      "type": "purchasing",
+      "title": "Recommended Replenishment: Heritage Fresh Malai Paneer (200g)",
+      "summary": "Order 10 packet(s) from Heritage Foods Regional Dairy.",
+      "reason": "Replenishment recommendation: Order 10 packet(s). Covers projected 5-day horizon demand (11 units) + safety stock (4.4 units) minus available inventory (13 units). Adjusted up to meet supplier MOQ (10 units).",
+      "evidence": {
+        "quantityAvailable": 13,
+        "forecastDemand": 11,
+        "proposedOrderQty": 10,
+        "supplierLeadTime": 2,
+        "safetyStockUnits": 4.4,
+        "potentialCostExposure": 880
+      },
+      "expectedBenefit": "Maintains continuous availability over the next 5 days while preventing surplus over-ordering.",
+      "uncertaintyNotes": "Forecast based on 14 sales days (moving average). Lead time assumed at 2 day(s).",
+      "policyComplianceNote": "Requires manual shopkeeper confirmation before ordering; ShelfSense never auto-places purchase orders.",
+      "status": "pending",
+      "createdAt": "2026-10-30T02:37:18.342Z",
+      "updatedAt": "2026-10-30T02:37:18.342Z"
+    },
+    {
+      "id": "rec_order_prod_mango_alphonso",
+      "productId": "prod_mango_alphonso",
+      "type": "purchasing",
+      "title": "Recommended Replenishment: Ratnagiri Alphonso Mangoes Grade-A (1kg Box)",
+      "summary": "Order 3 box(s) from supplier.",
+      "reason": "Replenishment recommendation: Order 3 box(s). Covers projected 4-day horizon demand (8 units) + safety stock (4 units) minus available inventory (9 units).",
+      "evidence": {
+        "quantityAvailable": 9,
+        "forecastDemand": 8,
+        "proposedOrderQty": 3,
+        "supplierLeadTime": 1,
+        "safetyStockUnits": 4,
+        "potentialCostExposure": 1350
+      },
+      "expectedBenefit": "Maintains continuous availability over the next 4 days while preventing surplus over-ordering.",
+      "uncertaintyNotes": "Forecast based on 0 sales days (moving average). Lead time assumed at 1 day(s).",
+      "policyComplianceNote": "Requires manual shopkeeper confirmation before ordering; ShelfSense never auto-places purchase orders.",
+      "status": "pending",
+      "createdAt": "2026-10-30T02:37:18.342Z",
+      "updatedAt": "2026-10-30T02:37:18.342Z"
+    },
+    {
+      "id": "rec_order_prod_yogurt_epigamia",
+      "productId": "prod_yogurt_epigamia",
+      "type": "purchasing",
+      "title": "Recommended Replenishment: Epigamia Greek Yogurt Strawberry (120g)",
+      "summary": "Order 12 cup(s) from Drums Food International (Epigamia).",
+      "reason": "Replenishment recommendation: Order 12 cup(s). Covers projected 5-day horizon demand (14 units) + safety stock (5.6 units) minus available inventory (16 units). Adjusted up to meet supplier MOQ (12 units).",
+      "evidence": {
+        "quantityAvailable": 16,
+        "forecastDemand": 14,
+        "proposedOrderQty": 12,
+        "supplierLeadTime": 2,
+        "safetyStockUnits": 5.6,
+        "potentialCostExposure": 540
+      },
+      "expectedBenefit": "Maintains continuous availability over the next 5 days while preventing surplus over-ordering.",
+      "uncertaintyNotes": "Forecast based on 14 sales days (moving average). Lead time assumed at 2 day(s).",
+      "policyComplianceNote": "Requires manual shopkeeper confirmation before ordering; ShelfSense never auto-places purchase orders.",
+      "status": "pending",
+      "createdAt": "2026-10-30T02:37:18.342Z",
+      "updatedAt": "2026-10-30T02:37:18.342Z"
+    },
+    {
+      "id": "rec_order_prod_eggs_country",
+      "productId": "prod_eggs_country",
+      "type": "purchasing",
+      "title": "Recommended Replenishment: Country Free-Range Brown Eggs (Pack of 6)",
+      "summary": "Order 6 pack(s) from supplier.",
+      "reason": "Replenishment recommendation: Order 6 pack(s). Covers projected 4-day horizon demand (12.8 units) + safety stock (6.4 units) minus available inventory (14 units).",
+      "evidence": {
+        "quantityAvailable": 14,
+        "forecastDemand": 12.8,
+        "proposedOrderQty": 6,
+        "supplierLeadTime": 1,
+        "safetyStockUnits": 6.4,
+        "potentialCostExposure": 372
+      },
+      "expectedBenefit": "Maintains continuous availability over the next 4 days while preventing surplus over-ordering.",
+      "uncertaintyNotes": "Forecast based on 14 sales days (moving average). Lead time assumed at 1 day(s).",
+      "policyComplianceNote": "Requires manual shopkeeper confirmation before ordering; ShelfSense never auto-places purchase orders.",
+      "status": "pending",
+      "createdAt": "2026-10-30T02:37:18.342Z",
+      "updatedAt": "2026-10-30T02:37:18.342Z"
+    }
+  ],
+  "actionLogs": [
+    {
+      "id": "act_1793326429436_2fqrv6",
+      "timestamp": "2026-10-30T02:13:49.436Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793326429436_3xr0p2",
+      "timestamp": "2026-10-30T02:13:49.436Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "completed"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793324502100_pnry97",
+      "timestamp": "2026-10-30T01:41:42.100Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793324502100_d9hpyo",
+      "timestamp": "2026-10-30T01:41:42.100Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "completed"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793321805090_ylxlss",
+      "timestamp": "2026-10-30T00:56:45.090Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793321805090_dxl2ea",
+      "timestamp": "2026-10-30T00:56:45.090Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "completed"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793317250641_6ho500",
+      "timestamp": "2026-10-29T23:40:50.641Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793317250641_rj1274",
+      "timestamp": "2026-10-29T23:40:50.641Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "completed"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793316133876_xq51x5",
+      "timestamp": "2026-10-29T23:22:13.876Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793316133876_1r73pk",
+      "timestamp": "2026-10-29T23:22:13.876Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "pending"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793315323292_2uryta",
+      "timestamp": "2026-10-29T23:08:43.292Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793315323292_opmi57",
+      "timestamp": "2026-10-29T23:08:43.292Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "completed"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793311808090_5dwfli",
+      "timestamp": "2026-10-29T22:10:08.090Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793311808090_8zv2vq",
+      "timestamp": "2026-10-29T22:10:08.090Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "pending"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793296571302_7vgqvg",
+      "timestamp": "2026-10-29T17:56:11.302Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793296571302_ykacns",
+      "timestamp": "2026-10-29T17:56:11.302Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "pending"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793296454379_aay6ig",
+      "timestamp": "2026-10-29T17:54:14.379Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793296454378_z4xar8",
+      "timestamp": "2026-10-29T17:54:14.378Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "completed"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793295575141_oydhr2",
+      "timestamp": "2026-10-29T17:39:35.141Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793295575141_pjsbkj",
+      "timestamp": "2026-10-29T17:39:35.141Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "completed"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793295515643_3jjzct",
+      "timestamp": "2026-10-29T17:38:35.643Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1793295515643_h9hrlf",
+      "timestamp": "2026-10-29T17:38:35.643Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "pending"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1792235246707_s5g6bc",
+      "timestamp": "2026-10-17T11:07:26.707Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1792235246707_pbbruy",
+      "timestamp": "2026-10-17T11:07:26.707Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "pending"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1792235172818_qf0ben",
+      "timestamp": "2026-10-17T11:06:12.818Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1792235172818_5p9qir",
+      "timestamp": "2026-10-17T11:06:12.818Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "completed"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1792234699566_lbvoba",
+      "timestamp": "2026-10-17T10:58:19.566Z",
+      "actionType": "recommendation_completed",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "approved"
+      },
+      "newValue": {
+        "status": "completed",
+        "reason": "Shelf rotated on Chiller rack"
+      },
+      "reason": "Shelf rotated on Chiller rack",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_1792234699566_gmrfz5",
+      "timestamp": "2026-10-17T10:58:19.566Z",
+      "actionType": "recommendation_approved",
+      "recommendationId": "rec_test_audit",
+      "productId": "prod_test_milk",
+      "previousValue": {
+        "status": "pending"
+      },
+      "newValue": {
+        "status": "approved",
+        "reason": "Shopkeeper confirmed in morning"
+      },
+      "reason": "Shopkeeper confirmed in morning",
+      "userConfirmed": true
+    },
+    {
+      "id": "act_001",
+      "actionType": "batch_created",
+      "productId": "prod_milk_amul",
+      "batchId": "batch_m102",
+      "newValue": {
+        "quantity": 35,
+        "cutoff": "2026-10-25"
+      },
+      "reason": "Stock received from daily morning dairy delivery",
+      "userConfirmed": true,
+      "timestamp": "2026-10-17T04:58:05.219Z"
+    },
+    {
+      "id": "act_002",
+      "actionType": "stock_adjusted",
+      "productId": "prod_paneer_local",
+      "batchId": "batch_unk001",
+      "reason": "Flagged for human inspection due to illegible label date",
+      "userConfirmed": true,
+      "timestamp": "2026-10-16T20:58:05.219Z"
+    }
+  ]
+}

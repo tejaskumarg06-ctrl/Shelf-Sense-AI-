@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #F4F7F4;
+    --foreground: #14231E;
+    --muted: #E2E8E4;
+    --muted-foreground: #5A7E70;
+    --bg-main: #F4F7F4;
+    --forest-dark: #0D2E24;
+    --forest-muted: #3D765E;
+    --forest-accent: #10B981;
+    --text-primary: #14231E;
+    --amber-warning: #F59E0B;
+    --red-critical: #E11D48;
+    --border-soft: #D9E4DD;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F4F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8D6CF;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9FB2A8;
+}
+
+/* Glowing Button & Tactile Google Pop Animations */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.45), 0 0 24px rgba(16, 185, 129, 0.2);
+    border-color: rgba(52, 211, 153, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(16, 185, 129, 0.75), 0 0 40px rgba(245, 158, 11, 0.35);
+    border-color: rgba(245, 158, 11, 0.9);
+  }
+}
+
+.glowing-btn-animation {
+  animation: glow-pulse 3s infinite ease-in-out;
+}
+
+@keyframes sticker-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12) rotate(-2deg); }
+  100% { transform: scale(1); }
+}
+
+.sticker-pop-hover:hover {
+  animation: sticker-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Accordion open/close animations for shadcn Radix Accordion */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* Feature Showcase & Settings card animations */
+@keyframes card-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-animate-in {
+  animation: card-entrance 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.card-animate-in:nth-child(1) { animation-delay: 0.05s; }
+.card-animate-in:nth-child(2) { animation-delay: 0.12s; }
+.card-animate-in:nth-child(3) { animation-delay: 0.19s; }
+.card-animate-in:nth-child(4) { animation-delay: 0.26s; }
+.card-animate-in:nth-child(5) { animation-delay: 0.33s; }
+
+/* Google Material Ripple Animation */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 600ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Modal Animations */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 200ms ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}

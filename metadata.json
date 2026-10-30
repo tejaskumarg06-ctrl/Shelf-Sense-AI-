@@ -1,0 +1,6 @@
+{
+  "name": "ShelfSense AI",
+  "description": "AI-Powered Inventory Intelligence, Demand Forecasting and Perishable Food-Waste Prevention for Retailers",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
