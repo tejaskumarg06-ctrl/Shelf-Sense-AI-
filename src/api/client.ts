@@ -12,7 +12,8 @@ import {
   ActionLog
 } from '../types';
 
-const API_BASE = '/api';
+// Use environment variable for API base, fallback to /api for local dev
+const API_BASE = import.meta.env.VITE_API_BASE || '/api';
 
 async function fetchJson<T>(url: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`${API_BASE}${url}`, {
